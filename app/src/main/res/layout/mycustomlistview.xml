@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--mycustomlistview.xml
+will display how each individual list item wil be viewed.
+current in our list item we have the delete button on the left side of the
+displayed name.
+it will also have a button to increase or decrese the grade of the student.
+this was originally made to manage the quantity but was adaptable to managing
+grades.  it will have a cap between 0 min, 4 max.
+-->
+<RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/button_delete"
+            android:background="@drawable/delete"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:onClick="deletingItem"/>
+
+        <TextView
+            android:id="@+id/customlist_studentID"
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="04"
+            android:maxLength="6"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="05dp"
+            android:layout_gravity="center"
+            android:text="Edgar"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

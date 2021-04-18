@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--main activity XML to handle the main activity class.
+must have a way to search student by name or id
+
+- button to add person
+- button to search for person
+- admin button to add colleagues
+
+it will also have a display for the names for the students search list-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5sp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_shield"
+        android:alpha=".4"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <EditText
+        android:id="@+id/editText_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Search by ID #"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:id="@+id/editText_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Search by Name"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/editText_qty"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/button_addStudent"
+        android:onClick="insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add\nStudent"
+        android:backgroundTint="#015277"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/editText_qty"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/bt_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button_addStudent"
+        android:layout_marginLeft="10sp"
+        android:layout_below="@id/editText_qty"
+        android:text="add\nUser"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/editText_item_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20sp"/>
+
+    <TextView
+        android:id="@+id/textViewDisplayDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginRight="20sp"
+        android:layout_below="@id/button_addStudent"/>
+
+    <TextView
+        android:id="@+id/textViewDisplayQTY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID #"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginRight="20sp"
+        android:layout_toRightOf="@id/textViewDisplayDelete"
+        android:layout_below="@id/button_addStudent"/>
+
+    <TextView
+        android:id="@+id/textViewDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/button_addStudent"
+        android:layout_toRightOf="@+id/textViewDisplayQTY"/>
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textViewDisplayName"
+            />
+
+</RelativeLayout>

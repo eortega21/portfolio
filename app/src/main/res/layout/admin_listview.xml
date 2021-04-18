@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--admin_listview.xml
+will display how each individual list item wil be viewed.
+current in our list item we have the delete button on the left side of the
+displayed name.
+it will also have a button to increase or decrese the grade of the student.
+this was originally made to manage the quantity but was adaptable to managing
+grades.  it will have a cap between 0 min, 4 max.
+-->
+<RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/btn_admin_delete"
+            android:background="@drawable/delete"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="30dp"
+
+            android:textStyle="bold"
+            android:onClick="deletingItem"/>
+
+        <TextView
+            android:id="@+id/txtV_admin_user_ID"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="04"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/txtV_admin_user_name"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_gravity="center"
+            android:text="Edgar"/>
+
+        <ImageButton
+            android:id="@+id/btn_admin_approve"
+            android:background="@drawable/add"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20sp"
+            android:textStyle="bold"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

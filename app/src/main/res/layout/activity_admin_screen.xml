@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending approval"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        />
+
+    <ListView
+        android:id="@+id/listView_pending_approval"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView2"
+        android:layout_above="@id/admin_exit_button"
+        />
+
+    <Button
+        android:id="@+id/admin_exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/admin_refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:layout_toRightOf="@id/admin_exit_button"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

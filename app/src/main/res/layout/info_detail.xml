@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Info_detail.xml SCREEN
+detail screen is an enhancement made to give more description of the current
+student.  this will provide more detail and can be modified to display what we
+would like from the student.  it can even be enhanced to show another list of classes.
+it will have
+- a button to update the information of the student.
+- a button to exit
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/LinearID">
+
+        <TextView
+            android:id="@+id/txtview_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:layout_alignParentTop="true"/>
+
+<LinearLayout
+    android:id="@+id/info_detail_layout_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/txtview_details"
+    android:weightSum="2"
+    >
+        <LinearLayout
+            android:id="@+id/info_detail_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="ID:"
+                    android:paddingTop="10sp"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="First Name"
+                    android:paddingTop="10sp"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Last Name"
+                    android:paddingTop="10sp"/>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Grade"
+                    android:paddingTop="10sp"/>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/info_detail_layout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtV_infoDetail_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:paddingTop="10sp"
+                    />
+                <TextView
+                    android:id="@+id/txtV_infoDetail_name_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First name"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_id"
+                    />
+                <EditText
+                    android:id="@+id/editTxt_infoDetail_fName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Name"
+                    android:visibility="invisible"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_id"/>
+                <TextView
+                    android:id="@+id/txtV_infoDetail_name_Last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last name"
+                    android:textSize="20sp"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_name_first"/>
+                <EditText
+                    android:id="@+id/editTxt_infoDetail_lName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Name"
+                    android:visibility="invisible"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_name_first"/>
+
+                <TextView
+                    android:id="@+id/txtV_infoDetail_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grade"
+                    android:textSize="20sp"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_name_Last"/>
+
+                <Spinner
+                    android:id="@+id/spinner_choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:layout_below="@id/txtV_infoDetail_name_Last"
+                    android:visibility="invisible"
+                    />
+
+        </RelativeLayout>
+
+</LinearLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Detail Description"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/info_detail_layout_1"
+            android:paddingTop="10sp" />
+        <TextView
+            android:id="@+id/txtV_infoDetail_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="detail description"
+            android:textSize="20sp"
+            android:layout_below="@id/textView4"
+            android:layout_above="@id/txtV_name_grade"
+            android:visibility="visible"
+            />
+
+        <EditText
+            android:id="@+id/editTxt_infoDetail_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/txtV_name_grade"
+            android:layout_below="@id/textView4"
+            android:text="Detail description"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtV_name_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PASS/FAIL"
+            android:textSize="30sp"
+            android:layout_above="@+id/btn_exit_infoDetail"
+            android:layout_marginBottom="30sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_Update_infoUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="80sp"
+            android:text="Update"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_exit_infoDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80sp"
+            android:text="exit"
+            android:textSize="15sp"/>
+
+
+
+
+</RelativeLayout>

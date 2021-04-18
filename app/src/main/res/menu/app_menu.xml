@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/SMSpermission"
+        android:title="SMS"
+        android:visible="true"
+        app:showAsAction="ifRoom"/>
+
+
+    <item android:id="@+id/action_done"
+        android:title="Log off"
+        android:visible="true"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_one"
+        android:title="Refresh"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_sort_AZ"
+        android:title="Sort A - Z"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_sort_ZA"
+        android:title="Sort Z - A"
+        app:showAsAction="never"/>
+</menu>

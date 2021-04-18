@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">project list</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="title_activity_admin_screen2">adminScreen2</string>
+    <string-array name="grade">
+        <item>F</item>
+        <item>D</item>
+        <item>C</item>
+        <item>B</item>
+        <item>A</item>
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

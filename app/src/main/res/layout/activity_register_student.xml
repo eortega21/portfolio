@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtV_Register_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Registration"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/TxtV_register_student_ID_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtV_Register_student"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:text="Student ID: "
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/txtV_register_student_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtV_Register_student"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/TxtV_register_student_ID_info"
+        android:ems="5"
+        android:maxLength="5"
+        android:inputType="number"
+        android:hint="Student ID" />
+
+    <TextView
+        android:id="@+id/TxtV_register_student_name_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_ID_info"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:text="Student first name: "
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/txtV_register_student_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_ID_info"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/TxtV_register_student_name_info"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="First name" />
+
+    <TextView
+        android:id="@+id/TxtV_register_student_name_last_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_name_info"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:text="Student's last name: "
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/txtV_register_student_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_name_info"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/TxtV_register_student_name_last_info"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Last name" />
+
+    <TextView
+        android:id="@+id/TxtV_register_student_grade_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtV_register_student_last_name"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:text="Student's grade: "
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/txtV_register_student_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_name_last_info"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/TxtV_register_student_grade_info"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Grade (provide #1-4"
+        android:visibility="invisible"/>
+    <Spinner
+        android:id="@+id/register_spinner_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_name_last_info"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/TxtV_register_student_grade_info"
+        />
+
+    <TextView
+        android:id="@+id/TxtV_register_student_desc_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_grade_info"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:text="Student's Description: "
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/txtV_register_student_Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtV_register_student_desc_info"
+        android:layout_marginLeft="0dp"
+        android:ems="10"
+        android:hint="Description/notes"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:maxLength="100"
+        android:layout_above="@id/btn_register_Add_student"
+        android:lines="5" />
+
+    <Button
+        android:id="@+id/btn_register_Add_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30sp"
+        android:text="Add Student" />
+
+    <Button
+        android:id="@+id/btn_register_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30sp"
+        android:text="Cancel" />
+
+
+</RelativeLayout>
